@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Farmacia {
@@ -14,9 +14,9 @@ public class Farmacia {
 	private String nombre;
 	private String telefono;
 	private String diaDeTurno;
-	@OneToMany
+	@ManyToOne
 	private Direccion direccion;
-	@OneToMany
+	@ManyToOne
 	private Punto puntoLocalizacion;
 
 	public Farmacia() {
