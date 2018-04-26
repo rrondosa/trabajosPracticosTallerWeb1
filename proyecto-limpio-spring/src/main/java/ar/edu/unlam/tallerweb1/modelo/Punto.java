@@ -13,6 +13,11 @@ public class Punto {
 	private String latitud;
 	private String longitud;
 	
+	public Punto(String latitud, String longitud) {
+		super();
+		this.latitud = latitud;
+		this.longitud = longitud;
+	}
 	public long getId() {
 		return id;
 	}

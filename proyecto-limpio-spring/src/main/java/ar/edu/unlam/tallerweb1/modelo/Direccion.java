@@ -21,6 +21,7 @@ public class Direccion {
 	}
 
 	public Direccion(String calle, String numero, Barrio barrio) {
+		super();	
 		this.calle = calle;
 		this.numero = numero;
 		this.barrio = barrio;
