@@ -16,26 +16,46 @@
 			<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 			    	<h3 class="form-signin-heading">Suma de numeros:</h3>
 					<hr class="colorgraph"><br>
-				<div class="row">
+				<form action="">
+					
+					
+					<div class="row">
 						<div class="span12">
-							<c:if test="${empty error}">
-							    <div class="row">
-							    	<div class="span6" path="" >${primerNro} +  ${segundoNro} =</div>
-							      	<div class="span6">${resultado}</div>
-							    </div>
-							 </c:if>	
+							
+						    
+						    <div class="row">
+						    	<div class="span6">${a} +  ${b} =</div>
+						      	<div class="span6">${resultado} </div>
+						    </div>
 						
 						</div>
-						
 					</div>
-					
-					<c:if test="${not empty error}">
-			        	<h4><span>${error}</span></h4>
-			        <br>
-		        	</c:if>	
+				</form>
 				
 			</div>
 		
+	
+	
+		
+			
+				
+				
+				
+				
+				
+				
+				<%--<form:form action="validar-login" method="POST" modelAttribute="usuario">
+
+					Elementos de entrada de datos, el elemento path debe indicar en que atributo del objeto usuario se guardan los datos ingresados
+					
+					<form:input path="email" id="email" type="email" class="form-control" />
+					
+					<form:input path="password" type="password" id="password" class="form-control"/>     		  
+					
+					<button class="btn btn-lg btn-primary btn-block" Type="Submit">Login</button> 
+				</form:form>--%>
+				
+
 				
 		</div>
 		
