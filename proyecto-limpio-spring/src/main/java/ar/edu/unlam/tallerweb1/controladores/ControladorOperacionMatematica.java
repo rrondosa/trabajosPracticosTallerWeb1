@@ -26,15 +26,17 @@ public class ControladorOperacionMatematica {
 		double resultado = 0 ;
 		double a = Double.parseDouble(primerNro);
 		double b = Double.parseDouble(segundoNro);
-		String simbolo = operador.toUpperCase();
+		String simbolo = operador.toUpperCase().trim();
 		
 		if(isInteger(primerNro) && isInteger(segundoNro) && isOperador(simbolo)){
 			
 			if( simbolo.equals(DIV) && b != 0){
 				resultado = a / b;
 			} else {
-				System.out.println("b es = 0" );
-				modelo.put("error", "Error no se puede realizar la operacion el segundo operador debe ser distinto 0.");
+				if (simbolo.equals(DIV) && b == 0) {
+					System.out.println("b es = 0" );
+					modelo.put("error", "Error no se puede realizar la operacion el segundo operador debe ser distinto 0.");
+				}
 			}
 			
 			switch (simbolo) {
